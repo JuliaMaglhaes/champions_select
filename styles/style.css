@@ -23,10 +23,22 @@
     letter-spacing: 5px;
 }
 
+.coloracao{
+    z-index: -777;
+    position: absolute;
+    background: linear-gradient(to top, transparent, #0948502f, #09485033);
+    width:34%;
+    top:0;
+    height: 70%;
+    margin-left:33%;
+    align-items: center;
+    justify-content: center;
+}
+
 #campeao-area{
     position: relative;
     display: flex;
-    width: 30%;
+    width: 27.3%;
     float:left;
     height:100vh;
     align-items: center;
@@ -37,7 +49,7 @@
     display: flex;
     background: var(--cor-fundo-box-opaca);
     background: linear-gradient(to right, transparent, var(--cor-fundo-box-opaca), transparent);
-    width:80%;
+    width:94%;
     height: 90px;
 }
 
@@ -123,6 +135,7 @@ img#campeao-img{
     width: 90%;
     height:60vh;
     overflow-y: scroll;
+    border-bottom: 1px solid var(--cor-scroll);
 }
 
 .box-selecao::-webkit-scrollbar {
@@ -153,13 +166,23 @@ img#campeao-img{
 }
 .hero_box{
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding: 10px;
-    width: 80px;
+    width: 85px;
+    max-height: 107px;
+    text-align: center;
+    justify-content: center;
+    padding-right: 10px;;
 }
 
 .hero_box span{
-    display: none;
+    color:#6c7061;
+    font-family: Friz Quadrata;
+}
+
+.hero_box img{
+    border: 0.1px solid var(--cor-borda-foto);
 }
 
 

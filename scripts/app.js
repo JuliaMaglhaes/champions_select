@@ -4,7 +4,7 @@ var Countdown = setInterval(function(){
     document.getElementById("tempo2").innerHTML = Time;
 
 if(Time === 0 ){
-    clearInterval(Countdown);
+    return true;
 }
     else{
         Time--;
