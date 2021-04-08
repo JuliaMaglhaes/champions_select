@@ -1,0 +1,199 @@
+.cabecalho{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color:var(--cor-texto-cabecalho);
+    text-align: center;
+    width: 100vw;
+    padding-top: 30px;
+    font-family: Friz Quadrata;
+    background-image: url(/assets/img/imagem-desenho.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cabecalho h1{
+    font-size:32px;
+    letter-spacing: 3px;
+}
+
+.cabecalho h2{
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+#campeao-area{
+    position: relative;
+    display: flex;
+    width: 30%;
+    float:left;
+    height:100vh;
+    align-items: center;
+}
+
+#campeao-area .box{
+    position: relative;
+    display: flex;
+    background: var(--cor-fundo-box-opaca);
+    background: linear-gradient(to right, transparent, var(--cor-fundo-box-opaca), transparent);
+    width:80%;
+    height: 90px;
+}
+
+.box .barra{
+    position: relative;
+    width: 13px;
+    height: 90px;
+    background-color: var(--cor-fundo-box);
+    margin-right: 8px;
+}
+
+.spells-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.spells-box #spell{
+    margin: 6px;
+}
+
+img#spell{
+    border: 1px solid #000;
+    width: 40px;
+}
+
+.campeao-selecionado{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width:70px;
+    margin-left:15px;
+}
+
+img#campeao-img{
+    width: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.texto-campeao{
+    display:flex;
+    flex-direction: column;
+    color: var(--cor-texto-box);
+    position: relative;
+    text-align: left;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.texto-campeao p{
+    position: relative;
+    font-family: Fiz Quadrata;
+    font-weight: 600;
+    
+}
+.tempo{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 29px;
+}
+.tempo h2{
+    color: var(--cor-texto-cabecalho);
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;;
+
+}
+
+#selecao{
+    position: relative;
+    width:50%;
+    display: flex;
+    margin-top:150px;
+}
+
+#selecao .box-selecao{
+    background: linear-gradient(to right, transparent, transparent, rgba(0, 0, 0, 0.267));
+    width: 90%;
+    height:60vh;
+    overflow-y: scroll;
+}
+
+.box-selecao::-webkit-scrollbar {
+    height: 25px;
+    width: 6px;
+    }
+
+#selecao .box-selecao::-webkit-scrollbar-track{
+    background: transparent
+    }
+
+#selecao .box-selecao::-webkit-scrollbar{ 
+    background: transparent;
+    height: 35px;
+    width: 6px;
+    }
+
+#selecao .box-selecao::-webkit-scrollbar-thumb{
+    background-color: var(--cor-scroll);
+    border-radius: 4px;
+    width: 2px;
+}
+
+.campeoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hero_box{
+    display: flex;
+    position: relative;
+    padding: 10px;
+    width: 80px;
+}
+
+.hero_box span{
+    display: none;
+}
+
+
+#mapa{
+    position: absolute;
+    z-index: -99;
+    width: 90%;
+    align-items: center;
+    display: block;
+    margin-left: 80px;
+    margin-right: auto;
+    opacity: 0.2;
+}
+
+/* Roda */
+
+.roda{
+    margin-top:60px;
+}
+
+.item{
+    position: absolute;
+    z-index: -999;
+    width: 600px;
+    height: 600px;
+    border: 16px double var(--roda);
+    border-top:16px dashed var(--roda);
+    border-left:16px solid var(--roda);
+    border-bottom:16px dashed var(--roda);
+    border-right:16px solid var(--roda);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    padding-top:200px;
+    float:left;
+    background-color: transparent;
+}
+

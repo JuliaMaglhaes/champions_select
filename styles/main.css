@@ -1,0 +1,36 @@
+@import url(//db.onlinewebfonts.com/c/c8e8fcd5d85d9b587022fe0a79809b73?family=Friz+Quadrata);
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+:root{
+    --cor-fundo-padrao: #000;
+    --cor-fundo-azulado: #060a0f;
+    --cor-texto-cabecalho: #f0e6d2;
+    --cor-fundo-box:#fabe0a;
+    --cor-fundo-box-opaca: #fabe0a44;
+    --cor-texto-box: #d9a60c;
+    --roda: #4e473536;
+    --cor-borda-foto: #252329;
+    --cor-scroll:#785a28;
+}
+
+body{
+    background-color: var(--cor-fundo-azulado);
+    /* background-image: url("/assets/img/mapa2.png"); */
+    /* background-size: cover; */
+    /* background-position: center;
+    background-size: contain; */
+    
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
