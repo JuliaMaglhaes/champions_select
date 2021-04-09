@@ -17,7 +17,8 @@
     --cor-texto-box: #d9a60c;
     --roda: #4e473536;
     --cor-borda-foto: #252329;
-    --cor-scroll:#785a28;
+    /* --cor-scroll:#785a28; */
+    --cor-scroll:#d9a60c;
 }
 
 @font-face {
@@ -46,7 +47,7 @@ body{
         background-image: url(../assets/img/mapa2.png);
         background-position: center;
         background-size: cover;
-        filter: blur(2px);
+        filter: blur(3px);
 }
 
 .mapa .efeito{

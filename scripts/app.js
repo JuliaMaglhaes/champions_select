@@ -20,6 +20,7 @@ if(Time === 0 ){
 const avatar = document.querySelector('.campeao-selecionado');
 const campeoess = document.querySelector('.campeoes');
 const mapa = document.querySelector('.mapa')
+const box = document.querySelector('.box')
 
 function Texto (self){
     return self
@@ -60,6 +61,7 @@ const fetchCampeoes = async () => {
             console.log(codigomapa)
             avatar.style.backgroundImage = `url(${Texto(historico)})`;
             mapa.style.backgroundImage = `url(${Mapa(codigomapa)})`;
+            box.style.backgroundImage = `url(${Mapa(codigomapa)})`;
         })
 }
 fetchCampeoes()

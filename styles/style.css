@@ -11,10 +11,11 @@
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top:6px;
 }
 
 .cabecalho h1{
-    font-size:32px;
+    font-size:52px;
     letter-spacing: 3px;
 }
 
@@ -26,11 +27,11 @@
 .coloracao{
     z-index: -777;
     position: absolute;
-    background: linear-gradient(to top, transparent, #0948502f, #09485033);
-    width:34%;
+    background: linear-gradient(to top, transparent, #0948505d, #09485033);
+    width:100%;
     top:0;
     height: 70%;
-    margin-left:33%;
+
     align-items: center;
     justify-content: center;
 }
@@ -42,6 +43,8 @@
     float:left;
     height:100vh;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #campeao-area .box{
@@ -50,13 +53,20 @@
     background: var(--cor-fundo-box-opaca);
     background: linear-gradient(to right, transparent, var(--cor-fundo-box-opaca), transparent);
     width:94%;
-    height: 90px;
+    height: 100px;
+    /* border-radius: 5px 5px 50px 50px; */
+    border-radius: 1px 0px 140px 0px;
+    background-image: url();
+    background-position: 50% 10%;
+    background-size: cover;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.199);
 }
+
 
 .box .barra{
     position: relative;
-    width: 13px;
-    height: 90px;
+    width: 5px;
+    height: 100px;
     background-color: var(--cor-fundo-box);
     margin-right: 8px;
 }
@@ -79,11 +89,19 @@ img#spell{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:10px;
     width:80px;
+    height: 80px;
     margin-left:15px;
     border-radius: 50%;
-    background-image: url(/assets/img/mapa.jpg);
+    background-image: url(https://www.opopular.com.br/polopoly_fs/1.2062806.1591120502!/image/image.jpg_gen/derivatives/landscape_800/image.jpg);
     object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.199);
+
 }
 
 img#campeao_img{
@@ -136,9 +154,9 @@ img#campeao_img{
 #selecao .box-selecao{
     background: linear-gradient(to right, transparent, transparent, rgba(0, 0, 0, 0.089));
     width: 90%;
-    height:60vh;
+    height:65vh;
     overflow-y: scroll;
-    border-bottom: 1px solid var(--cor-scroll);
+    /* border-bottom: 1px solid var(--cor-scroll); */
 }
 
 .box-selecao::-webkit-scrollbar {
@@ -176,7 +194,7 @@ img#campeao_img{
     max-height: 107px;
     text-align: center;
     justify-content: center;
-    padding-right: 10px;;
+    padding-right: 10px;
 }
 
 .hero_box span{
@@ -186,6 +204,11 @@ img#campeao_img{
 
 .hero_box img{
     border: 0.1px solid var(--cor-borda-foto);
+    border-radius: 12px;
+}
+
+.hero_box img:hover{
+    border: 0.1px solid #0693a6;
 }
 
 
@@ -200,13 +223,13 @@ img#campeao_img{
     z-index: -999;
     width: 600px;
     height: 600px;
-    border: 16px double var(--roda);
-    border-top:16px dashed var(--roda);
-    border-left:16px solid var(--roda);
-    border-bottom:16px dashed var(--roda);
-    border-right:16px solid var(--roda);
+    border: 40px double var(--roda);
+    border-top:40px dashed var(--roda);
+    border-left:40px solid var(--roda);
+    border-bottom:40px dashed var(--roda);
+    border-right:40px solid var(--roda);
     border-radius: 50%;
-    animation: spin 0.6s linear infinite;
+    animation: spin 0.9s linear infinite;
     padding-top:200px;
     float:left;
     background-color: transparent;
