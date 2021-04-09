@@ -12,10 +12,25 @@ if(Time === 0 ){
 }, 1000);
 
 // Seleção
+
+
+
+
+
+const avatar = document.querySelector('.campeao-selecionado');
+const campeoess = document.querySelector('.campeoes');
+const mapa = document.querySelector('.mapa')
+
+function Texto (self){
+    return self
+}
+
+function Mapa (self){
+    return "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+self+"_0.jpg"
+}
+
 const fetchCampeoes = async () => {
     const urlCampeao  = `http://ddragon.leagueoflegends.com/cdn/11.7.1/data/pt_BR/champion.json`
-    // const getCampeao = champion => `http://ddragon.leagueoflegends.com/cdn/11.7.1/data/pt_BR/champion/${champion}.json`;
-    // const listaCampeao = []
 
     await fetch(urlCampeao)
     .then(response => response.json())
@@ -24,23 +39,31 @@ const fetchCampeoes = async () => {
         accumulator = ""
         for (let index = 0; index < nomes.length; index++) {
             dadosDoHeroi = response.data[nomes[index]]
-            console.log(dadosDoHeroi)  
+            // console.log(dadosDoHeroi.id)
 
             accumulator += `<div class="hero_box">
-                                <img src="http://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" />
-                                <span>${dadosDoHeroi.name}</span> 
+                                <img id="heroi_imagem" src="http://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" alt="${dadosDoHeroi.id}" />
+                                <span>${dadosDoHeroi.name}</span>  
                             </div>`
-     
         }
-        document.getElementById("campeoes").innerHTML = accumulator
-    })
-}
 
+        document.getElementById("campeoes").innerHTML = accumulator
+        })  
+
+        campeoess.addEventListener('click', (event) =>{
+            
+            console.log(event.target)
+            historico = event.target.src;
+            codigomapa = event.target.alt;
+            historico.toString();
+
+            console.log(codigomapa)
+            avatar.style.backgroundImage = `url(${Texto(historico)})`;
+            mapa.style.backgroundImage = `url(${Mapa(codigomapa)})`;
+        })
+}
 fetchCampeoes()
 
 
 
-
-
-// const mapa = document.querySelector('.mapa');
 // const selecao = document.querySelector('.box-selecao')

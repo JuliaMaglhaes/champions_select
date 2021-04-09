@@ -79,11 +79,14 @@ img#spell{
     position: relative;
     display: flex;
     align-items: center;
-    width:70px;
+    width:80px;
     margin-left:15px;
+    border-radius: 50%;
+    background-image: url(/assets/img/mapa.jpg);
+    object-fit: cover;
 }
 
-img#campeao-img{
+img#campeao_img{
     width: 90px;
     object-fit: contain;
     border-radius: 50%;
@@ -131,7 +134,7 @@ img#campeao-img{
 }
 
 #selecao .box-selecao{
-    background: linear-gradient(to right, transparent, transparent, rgba(0, 0, 0, 0.267));
+    background: linear-gradient(to right, transparent, transparent, rgba(0, 0, 0, 0.089));
     width: 90%;
     height:60vh;
     overflow-y: scroll;
@@ -185,17 +188,6 @@ img#campeao-img{
     border: 0.1px solid var(--cor-borda-foto);
 }
 
-
-#mapa{
-    position: absolute;
-    z-index: -99;
-    width: 90%;
-    align-items: center;
-    display: block;
-    margin-left: 80px;
-    margin-right: auto;
-    opacity: 0.2;
-}
 
 /* Roda */
 

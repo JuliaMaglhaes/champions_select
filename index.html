@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="styles/animation.css">
 </head>
 <body>
+    <div class="mapa">
+        <div class="efeito"></div>
+    </div>
     <div class="container">
-        <img id="mapa" src="assets/img/mapa2.png" alt="mapa">
         <header class="cabecalho">
             <h1>ESCOLHA SEU CAMPEÃO!</h1>
             <h2 id="tempo"></h2>
@@ -19,16 +21,16 @@
         </header>
         <div id="campeao-area">
             <div class="box">
-            <div class="barra"></div>
-            <div class="spells-box">
-                <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/spell/SummonerFlash.png " id="spell">
-                <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/spell/SummonerFlash.png " id="spell">
+                <div class="barra"></div>
+                <div class="spells-box">
+                    <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/spell/SummonerFlash.png " id="spell">
+                    <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/spell/SummonerFlash.png " id="spell">
             </div>
             <div class="campeao-selecionado">
-                <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/champion/Jinx.png " id="campeao-img">
+                <!-- <img src="https://ddragon.leagueoflegends.com/cdn/10.25.1/img/champion/Jinx.png " id="campeao_img"> -->
             </div>
             <div class="texto-campeao">
-                <p>Escolhendo</p>
+                <p id="nome-escolha">Escolhendo</p>
                 <p>Flocketz</p>
             </div>
             <div class="tempo">
@@ -39,22 +41,20 @@
         <div class="roda">
             <div class="item">
                 
-            </div> 
-            
+            </div>    
         </div>
         <div id="selecao">
             <div class="box-selecao">
                 <div id="campeoes" class="campeoes">
-                    <div class="hero_box"> 
-                        <img src="${dadosDoHeroi.image}"/> 
+                    <div  class="hero_box"> 
+                        <img id="heroi_imagem" src="${dadosDoHeroi.image}"/> 
                         <span> ${dadosDoHeroi.name}</span> 
                     </div>
-                </div>
-                
-                
+                </div>  
             </div>
         </div>
 
+        
         <!-- <div id="campeoes">
             <ul>
                 <li class="lista active" data-filter="Tudo">Todos</li>
