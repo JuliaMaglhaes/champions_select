@@ -64,6 +64,3 @@ const fetchCampeoes = async () => {
 }
 fetchCampeoes()
 
-
-
-// const selecao = document.querySelector('.box-selecao')
