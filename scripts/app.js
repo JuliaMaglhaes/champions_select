@@ -30,7 +30,7 @@ function Mapa (self){
 }
 
 const fetchCampeoes = async () => {
-    const urlCampeao  = `http://ddragon.leagueoflegends.com/cdn/11.7.1/data/pt_BR/champion.json`
+    const urlCampeao  = `https://ddragon.leagueoflegends.com/cdn/11.7.1/data/pt_BR/champion.json`
 
     await fetch(urlCampeao)
     .then(response => response.json())
@@ -42,7 +42,7 @@ const fetchCampeoes = async () => {
             // console.log(dadosDoHeroi.id)
 
             accumulator += `<div class="hero_box">
-                                <img id="heroi_imagem" src="http://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" alt="${dadosDoHeroi.id}" />
+                                <img id="heroi_imagem" src="https://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" alt="${dadosDoHeroi.id}" />
                                 <span>${dadosDoHeroi.name}</span>  
                             </div>`
         }
