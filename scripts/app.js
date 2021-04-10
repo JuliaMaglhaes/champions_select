@@ -1,4 +1,4 @@
-var Time = 86;
+var Time = 40;
 var Countdown = setInterval(function(){
     document.getElementById("tempo").innerHTML = Time;
     document.getElementById("tempo2").innerHTML = Time;
@@ -21,6 +21,7 @@ const avatar = document.querySelector('.campeao-selecionado');
 const campeoess = document.querySelector('.campeoes');
 const mapa = document.querySelector('.mapa')
 const box = document.querySelector('.box')
+const nomeCampeao = document.querySelector('#nome-escolha');
 
 function Texto (self){
     return self
@@ -29,6 +30,8 @@ function Texto (self){
 function Mapa (self){
     return "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/"+self+"_0.jpg"
 }
+
+
 
 const fetchCampeoes = async () => {
     const urlCampeao  = `https://ddragon.leagueoflegends.com/cdn/11.7.1/data/pt_BR/champion.json`
@@ -43,7 +46,7 @@ const fetchCampeoes = async () => {
             // console.log(dadosDoHeroi.id)
 
             accumulator += `<div class="hero_box">
-                                <img id="heroi_imagem" src="https://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" alt="${dadosDoHeroi.id}" />
+                                <img data-nome="${dadosDoHeroi.name}" id="heroi_imagem" src="https://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${dadosDoHeroi.id}.png" alt="${dadosDoHeroi.id}" />
                                 <span>${dadosDoHeroi.name}</span>  
                             </div>`
         }
@@ -53,15 +56,17 @@ const fetchCampeoes = async () => {
 
         campeoess.addEventListener('click', (event) =>{
             
-            console.log(event.target)
+            // console.log(event.target)
             historico = event.target.src;
             codigomapa = event.target.alt;
+            campeaoNome = event.target.dataset.nome;
             historico.toString();
 
-            console.log(codigomapa)
+            // console.log(codigomapa)
             avatar.style.backgroundImage = `url(${Texto(historico)})`;
             mapa.style.backgroundImage = `url(${Mapa(codigomapa)})`;
             box.style.backgroundImage = `url(${Mapa(codigomapa)})`;
+            nomeCampeao.innerText = campeaoNome;
         })
 }
 fetchCampeoes()

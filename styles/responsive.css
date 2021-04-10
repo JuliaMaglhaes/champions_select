@@ -1,16 +1,18 @@
 
 
 @media screen and (max-width:1024px){
-    .mensagem-erro{
-        display: none;
-    }
+
     .container{
         display: flex;
     }
 
+    .timeazul{
+        display: none;
+    }
+
     .area-esquerda{
         display: none;
-        width:100vw;
+        width:100vw
     }
 
     #selecao{
@@ -18,5 +20,19 @@
     }
 
 
-    
+}
+
+@media screen and (max-width: 768px){
+
+    .timeazul{
+        display: none;
+    }
+    .area-esquerda{
+        display: none;
+    }
+
+    #selecao{
+        margin-top:120px;
+    }
+
 }
