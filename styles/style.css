@@ -15,6 +15,7 @@
 }
 
 .cabecalho h1{
+    position: relative;
     font-size:52px;
     letter-spacing: 3px;
 }
@@ -28,20 +29,32 @@
     z-index: -777;
     position: absolute;
     background: linear-gradient(to top, transparent, #0948505d, #09485033);
-    width:100%;
+    width:100vw;
     top:0;
     height: 70%;
-
     align-items: center;
     justify-content: center;
+}
+
+
+.area-esquerda{
+    margin:0;
+    padding:0;
+    background: linear-gradient(to right,  #09485033,  #09485002, transparent, transparent);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    
 }
 
 #campeao-area{
     position: relative;
     display: flex;
-    width: 27.3%;
+    width: 100%;
     float:left;
-    height:100vh;
+    height:90vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -54,8 +67,7 @@
     background: linear-gradient(to right, transparent, var(--cor-fundo-box-opaca), transparent);
     width:94%;
     height: 100px;
-    /* border-radius: 5px 5px 50px 50px; */
-    border-radius: 1px 0px 140px 0px;
+    border-radius: 60px 0px 60px 0px;
     background-image: url();
     background-position: 50% 10%;
     background-size: cover;
@@ -68,7 +80,7 @@
     width: 5px;
     height: 100px;
     background-color: var(--cor-fundo-box);
-    margin-right: 8px;
+    margin-right: 0px;
 }
 
 .spells-box{
@@ -140,7 +152,7 @@ img#campeao_img{
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 30px;;
+    font-size: 30px;
 
 }
 
@@ -148,10 +160,13 @@ img#campeao_img{
     position: relative;
     width:50%;
     display: flex;
-    margin-top:150px;
+    margin-top:80px;
+    align-items: center;
+    justify-content: center;
 }
 
 #selecao .box-selecao{
+    position: relative;
     background: linear-gradient(to right, transparent, transparent, rgba(0, 0, 0, 0.089));
     width: 90%;
     height:65vh;
@@ -216,6 +231,7 @@ img#campeao_img{
 
 .roda{
     margin-top:60px;
+    
 }
 
 .item{
@@ -229,9 +245,25 @@ img#campeao_img{
     border-bottom:40px dashed var(--roda);
     border-right:40px solid var(--roda);
     border-radius: 50%;
-    animation: spin 0.9s linear infinite;
+    animation: spin 1.5s linear infinite;
     padding-top:200px;
     float:left;
-    background-color: transparent;
+}
+
+#fundo-rotativo{
+    position: absolute;
+    display: flex;
+    margin-top:9px;
+    width:82px;
+    height: 82px;
+    margin-left:71px;
+    border-radius: 50%;
+    border: 6px solid var(--cor-scroll);
+    border-top:40px dashed var(--cor-scroll);
+    border-left:40px solid transparent;
+    border-bottom:40px dashed transparent;
+    border-right:40px solid transparent;
+    animation: spin 0.8s linear infinite;
+    float:left;
 }
 

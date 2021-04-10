@@ -1,0 +1,22 @@
+
+
+@media screen and (max-width:1024px){
+    .mensagem-erro{
+        display: none;
+    }
+    .container{
+        display: flex;
+    }
+
+    .area-esquerda{
+        display: none;
+        width:100vw;
+    }
+
+    #selecao{
+        width:100%;
+    }
+
+
+    
+}
