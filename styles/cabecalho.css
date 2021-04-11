@@ -1,0 +1,37 @@
+.cabecalho{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color:var(--cor-texto-cabecalho);
+    text-align: center;
+    width: 100vw;
+    padding-top: 30px;
+    font-family: Friz Quadrata;
+    background-image: url(../assets/img/imagem-desenho.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top:6px;
+}
+
+.cabecalho h1{
+    position: relative;
+    font-size:52px;
+    letter-spacing: 3px;
+}
+
+.cabecalho h2{
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+.coloracao{
+    z-index: -777;
+    position: absolute;
+    background: linear-gradient(to top, transparent, #0948505d, #09485033);
+    width:100vw;
+    top:0;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+}

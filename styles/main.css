@@ -1,4 +1,10 @@
 @import url(https://db.onlinewebfonts.com/c/c8e8fcd5d85d9b587022fe0a79809b73?family=Friz+Quadrata);
+@import 'responsive.css';
+@import 'boxCampeoes.css';
+@import 'animation.css';
+@import 'rotativo.css';
+@import 'cabecalho.css';
+@import 'campeao.css';
 
 *{
     box-sizing: border-box;

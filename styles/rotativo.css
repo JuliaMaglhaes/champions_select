@@ -1,0 +1,39 @@
+/* Roda */
+
+.roda{
+    margin-top:60px;
+    
+}
+
+.item{
+    position: absolute;
+    z-index: -999;
+    width: 600px;
+    height: 600px;
+    border: 40px double var(--roda);
+    border-top:40px dashed var(--roda);
+    border-left:40px solid var(--roda);
+    border-bottom:40px dashed var(--roda);
+    border-right:40px solid var(--roda);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    padding-top:200px;
+    float:left;
+}
+
+#fundo-rotativo{
+    position: absolute;
+    display: flex;
+    margin-top:9px;
+    width:82px;
+    height: 82px;
+    margin-left:71px;
+    border-radius: 50%;
+    border: 6px solid var(--cor-scroll);
+    border-top:40px dashed var(--cor-scroll);
+    border-left:40px solid transparent;
+    border-bottom:40px dashed transparent;
+    border-right:40px solid transparent;
+    animation: spin 0.8s linear infinite;
+    float:left;
+}
