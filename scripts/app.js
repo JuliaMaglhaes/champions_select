@@ -61,20 +61,20 @@ function gerarSelecaoElementos(champion){
     return selecao;
 }
 
+function gerarAleatorio(){
+    var aleatoriogerado = arrayChampions[Math.floor(Math.random() * arrayChampions.length)];
+    console.log(aleatoriogerado.name, aleatoriogerado.id)
+
+    avatar.style.backgroundImage = `url(https://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/${aleatoriogerado.id}.png)`;
+    mapa.style.backgroundImage = getBackground(aleatoriogerado.id);
+    box.style.backgroundImage = getBackground(aleatoriogerado.id);
+    nomeCampeao.innerText = aleatoriogerado.name;
+
+}
 
 function campeoesLista(){
     const container = document.querySelector('.campeoes');
 
-    const aleatorio ={
-        name:'Aleatório',
-        id: 'none',
-    }
-    // const aleatorio = document.createElement('div');
-    // aleatorio.name = 'Aleatorio';
-    // aleatorio.id = 'none';
-    // aleatorio.img = 'Aleatorio';
-
-    arrayChampions.unshift(aleatorio)
     arrayChampions.forEach((champion) =>{
         const selecao = gerarSelecaoElementos(champion);
         const img = gerarImagem(champion);
@@ -83,15 +83,6 @@ function campeoesLista(){
         selecao.appendChild(img);
         selecao.appendChild(name);
         container.append(selecao);
-
-        if(img.src == 'https://ddragon.leagueoflegends.com/cdn/11.7.1/img/champion/none.png'){
-            img.setAttribute("src", `https://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg`);
-        }
-        // Pegar elementos aleatórios nos campeões
-        // img.onclick = function(){
-        //     var aleatoriogerado = arrayChampions[Math.floor(Math.random() * arrayChampions.length)];
-        //     console.log(aleatoriogerado)
-        // }
     })
 }
 
@@ -105,7 +96,7 @@ const fetchCampeoes = async () => {
         const parsedResponse = data.map((item) => {
             return response.data[item]
         })
-        arrayChampions = parsedResponse;
+        arrayChampions = parsedResponse.slice(0, 132);
     });
 }
 
