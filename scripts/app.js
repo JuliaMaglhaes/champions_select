@@ -1,5 +1,5 @@
 // Contador
-var Time = 40;
+var Time = 50;
 var Countdown = setInterval(function(){
     document.getElementById("tempo").innerHTML = Time;
     document.getElementById("tempo2").innerHTML = Time;
@@ -7,7 +7,7 @@ var Countdown = setInterval(function(){
 if(Time === 0){
     console.log("Tempo esgotado")
     clearInterval(Time);
-    // window.location.href = "https://juliamaglhaes.github.io/Login_Client_Lol/";
+    window.location.href = "https://juliamaglhaes.github.io/Login_Client_Lol/";
     
 }
     else{
