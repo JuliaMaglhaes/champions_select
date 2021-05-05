@@ -69,7 +69,6 @@ function gerarAleatorio(){
     mapa.style.backgroundImage = getBackground(aleatoriogerado.id);
     box.style.backgroundImage = getBackground(aleatoriogerado.id);
     nomeCampeao.innerText = aleatoriogerado.name;
-
 }
 
 function campeoesLista(){
